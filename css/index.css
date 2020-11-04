@@ -2,3 +2,11 @@ a:hover {
     background-color: #e67e22 !important;
     color: white !important;
 }
+#table_affecter {
+    height: 430px !important;
+    overflow: scroll !important;
+}
+#liste-acteur {
+    height: 400px !important;
+    overflow: scroll !important;
+}

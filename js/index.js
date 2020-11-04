@@ -1,17 +1,32 @@
-
-jQuery(document).ready(function() {
+jQuery(document).ready(function() { 
+    //enregistrer une affectation
     jQuery("button").click(function(event) {
-        var ide = this.id;
-        jQuery("#" + ide).attr("disabled", "");
         event.preventDefault();
+        var id_acteur = this.id;  
+        //console.log(id_acteur);
+        var fonction = jQuery("#fonction_" + id_acteur).val();
+        var lieu_intervention = jQuery("#lieu_intervention_" + id_acteur).val();
+        var annees = jQuery("#annees").val();
+        //console.log(id_acteur);
+        if(fonction == null) {jQuery("#fonction_" + id_acteur).css({border: "1px solid red" });}
+        if(lieu_intervention == "") {jQuery("#lieu_intervention_" + id_acteur).css({border: "1px solid red" });}
+        //validation formulaire
+        if(fonction !== null && lieu_intervention !== "") {
+            //Ajax
+            $.post("insertion.php", {
+            id_acteur: id_acteur, 
+            fonction: fonction, 
+            lieu_intervention: lieu_intervention, 
+            annees: annees})
+            .done(function(data) {
+                if(data){
+                    jQuery("#ligne_" + id_acteur).hide("slow");
+                } else {console.log("c'est null");}
+                });
+            } else {}
     });
-    
-});
 
-/*var valider = document.getElementById("4");
-valider.addEventListener("click", function(event) {
-    alert("clic!");
-    event.preventDefault()});*/
+});
 
 function creerElement(balise, classe, idElt, type, text, endroit) {
     var balisElmt

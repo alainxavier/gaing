@@ -16,7 +16,6 @@
     $row = $result->fetch_assoc();
     $_SESSION['nom'] = $row['nom'];
     $_SESSION['prenoms'] = $row['prenoms'];
-
   }
 ?>
 
@@ -39,13 +38,13 @@
       <div class="row">
         <!-- Marge droite -->
         <div class="col-10 mt-2 px-0" id="droite">
-          <div class="mb-2" style="background-color: #F79F1F;">
+          <div style="background-color: #F79F1F;">
           <!--Titre de la page-->
           <button type="button" class="btn btn-lg btn-block" >GESTION DES ACTEURS DE L'INSPECTION GENERALE</button>
         </div>
 
           <?php
-            include 'navigation.php';
+            //include 'navigation.php';
 
             $_SESSION["page"] = @$_GET["page"];
 
@@ -68,10 +67,10 @@
               include 'acteurs-exam.html';
               break;
             case "exam2021":
-              include 'acteurs-exam.html';
+              include 'exam_20-21.html';
               break;
-            case "conc1718":
-              include 'acteurs-concour.html';
+            case "conexan":
+              include 'acteurs-concour.php';
               break;
             case "conc1819":
               include 'acteurs-concour.html';
@@ -80,10 +79,10 @@
               include 'acteurs-concour.html';
               break;
             case "conc2021":
-              include 'acteurs-concour.html';
+              include 'concour_20-21.html';
               break;
-            case "acteurs":
-              include 'liste_acteurs.html';
+            case "exam-pjcd_2021":
+              include 'exam-pjcd_20-21.php';
               break;
             case "affecter":
               include 'affecter.php';
@@ -109,12 +108,36 @@
           <h5 class="card-title"><?php echo $_SESSION['prenoms']; ?></h5>
           <h5 class="card-title"><?php echo $_SESSION['nom']; ?></h5>
           <p class="card-text"><?php echo $_SESSION['email']; ?></p>
+          <a href="/" class="btn btn-primary mb-2">Page d'accueil</a><br>
           <a href="/?page=register" class="btn btn-info mb-2">Ajouter acteur</a><br>
-          <a href="/?page=affecter" class="btn btn-success mb-2">Affecter acteurs</a><br>
+          <button type="button" class="btn btn-success mb-2" data-toggle="modal" data-target="#exampleModal">
+          Affecter acteurs</button>
           <a href="logout.php" class="btn btn-danger">Déconnexion</a>
         </div>
       </div>
+      
+    <!-- Modal -->
+    <form method="POST" action="?page=affecter">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Choisissez l'année scolaire</h5>
+          </div>
+          <div class="modal-body">
+          <select class="form-control" name="annees" id="annees" required>
+          <option selected>2020-2021</option>
+          <option>2021-2022</option>
+          </select>
+          </div>
+          <div class="modal-footer">
+            <input type="submit" class="btn btn-primary" value="Valider">
+          </div>
         </div>
+      </div>
+    </div>
+    </form>
+    </div>
 		</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 22 oct. 2020 à 14:50
+-- Généré le :  sam. 07 nov. 2020 à 19:24
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -58,6 +58,105 @@ CREATE TABLE IF NOT EXISTS `activites` (
   `annees` varchar(255) NOT NULL,
   `date_modification` datetime NOT NULL,
   PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `activites_2017_2018`
+--
+
+DROP TABLE IF EXISTS `activites_2017_2018`;
+CREATE TABLE IF NOT EXISTS `activites_2017_2018` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_acteur` int(11) NOT NULL,
+  `fonction` varchar(255) NOT NULL,
+  `lieu_intervention` varchar(255) NOT NULL,
+  `annees` varchar(255) NOT NULL,
+  `date_modification` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `activites_2018_2019`
+--
+
+DROP TABLE IF EXISTS `activites_2018_2019`;
+CREATE TABLE IF NOT EXISTS `activites_2018_2019` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_acteur` int(11) NOT NULL,
+  `fonction` varchar(255) NOT NULL,
+  `lieu_intervention` varchar(255) NOT NULL,
+  `annees` varchar(255) NOT NULL,
+  `date_modification` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `activites_2019_2020`
+--
+
+DROP TABLE IF EXISTS `activites_2019_2020`;
+CREATE TABLE IF NOT EXISTS `activites_2019_2020` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_acteur` int(11) NOT NULL,
+  `fonction` varchar(255) NOT NULL,
+  `lieu_intervention` varchar(255) NOT NULL,
+  `annees` varchar(255) NOT NULL,
+  `date_modification` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `activites_2020_2021`
+--
+
+DROP TABLE IF EXISTS `activites_2020_2021`;
+CREATE TABLE IF NOT EXISTS `activites_2020_2021` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_acteur` int(11) NOT NULL,
+  `fonction` varchar(255) NOT NULL,
+  `lieu_intervention` varchar(255) NOT NULL,
+  `annees` varchar(255) NOT NULL,
+  `date_modification` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `activites_2021_2022`
+--
+
+DROP TABLE IF EXISTS `activites_2021_2022`;
+CREATE TABLE IF NOT EXISTS `activites_2021_2022` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id_acteur` int(11) NOT NULL,
+  `fonction` varchar(255) NOT NULL,
+  `lieu_intervention` varchar(255) NOT NULL,
+  `annees` varchar(255) NOT NULL,
+  `date_modification` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `fonctions`
+--
+
+DROP TABLE IF EXISTS `fonctions`;
+CREATE TABLE IF NOT EXISTS `fonctions` (
+  `id_fonction` int(11) NOT NULL AUTO_INCREMENT,
+  `libelle` varchar(255) NOT NULL,
+  `date_create` datetime NOT NULL,
+  PRIMARY KEY (`id_fonction`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------

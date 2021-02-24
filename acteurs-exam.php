@@ -14,11 +14,11 @@ if($_SESSION["scolaire"] == "examen") {
       <a class="btn btn-sm btn-outline-secondary" type="button" href="/?page=annees"><?php echo $_SESSION["annees"]; ?></a>
     </form>
 </nav>
-<div class="d-flex flex-column flex-md-row justify-content-center p-3 mb-3">
-      <h5 class="list-group-item list-group-item-action text-white text-center" style="background-color: #16a085;">ACTEURS DES CONCOURS SCOLAIRES</h5>
+<div class="d-flex flex-column flex-md-row justify-content-center p-3">
+      <h5 class="list-group-item list-group-item-action text-white text-center" style="background-color: #16a085;">ACTEURS DES EXAMENS SCOLAIRES</h5>
 </div>
 <div class="d-flex flex-column flex-md-row justify-content-center p-3 px-md-4 mb-3">
-      <a class="list-group-item list-group-item-action"  href="/?page=acteurs&acteur=6">Commissaires de Composition</a>
-      <a class="list-group-item list-group-item-action"  href="/?page=acteurs&acteur=4">Commissaires de Correction</a>
-      <a class="list-group-item list-group-item-action" href="/?page=acteurs&acteur=2">Présidents de jurys de délibération</a>
-  </div>
+      <a class="list-group-item list-group-item-action"  href="/?page=acteurs&acteur=1">Président de Jurys de Correction et de Délibération</a>
+      <a class="list-group-item list-group-item-action"  href="/?page=acteurs&acteur=3">Vice Président de Jurys de Correction et de Délibération</a>
+      <a class="list-group-item list-group-item-action" href="/?page=acteurs&acteur=5">Commissaires de Centres de Composition</a>
+</div>

@@ -16,6 +16,11 @@
       <th scope="col">Matricule</th>
       <th scope="col">Filière</th>
       <th scope="col">Contact</th>
+      <th scope="col">Genre</th>
+      <th scope="col">Commune</th>
+      <th scope="col">Email</th>
+      <th scope="col"><i class="bi bi-pencil-square"></i></th>
+      <th scope="col"><i class="bi bi-person-x-fill"></i></th>
     </tr>
   </thead>
   <tbody>
@@ -29,8 +34,11 @@
       <td><?php echo $row['matricule'];?></td>
       <td><?php echo $row['filiere'];?></td>
       <td><?php echo $row['contact'];?></td>
-      <td><a id="<?php echo $row['id_acteur'];?>" class="text-primary" href="#">Modifier</a></td>
-      <td><a id="<?php echo $row['id_acteur'];?>" class="text-danger" href="#">Supprimer</a></td>
+      <td><?php echo $row['genre'];?></td>
+      <td><?php echo $row['commune'];?></td>
+      <td><?php echo $row['email'];?></td>
+      <td><a id="<?php echo $row['id_acteur'];?>" class="text-primary" href="#"><i class="bi bi-pencil-square"></i></a></td>
+      <td><a id="<?php echo $row['id_acteur'];?>" class="text-danger" href="#"><i class="bi bi-person-x-fill"></i></a></td>
     </tr>
     <?php $compteur++; }; ?>
     </tbody>

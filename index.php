@@ -31,8 +31,21 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Boxicons CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/css/boxicons.min.css" integrity="sha256-H8c0yAkzdmZ1/anJofhnKJ3ljR5t3IViHho361BqIro=" crossorigin="anonymous">
+    <!-- bootstrap-icons CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     <!-- Custom styles for this template -->
     <link href="css/index.css" rel="stylesheet">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery.js"></script>
+    <!--<script src="popper/popper.js"></script>-->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Mon JS -->
+    <script src="js/index.js"></script>
+    
+    <!-- Boxicons -->
+    <script src="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/dist/boxicons.min.js"></script>
   </head>
   <body onload="myFunction()" id="corps">
   <script>
@@ -46,7 +59,8 @@
     <img class="my-n1" src="images/logodexc.png" alt="Logo DEXC">
     <h5 class="my-0 mr-md-auto font-weight-normal"></h5>
     <nav class="my-2 my-md-0 mr-md-3">
-      <a class="btn btn-outline-dark mb-1" href="/">Accueil</a>
+      <a class="btn btn-outline-primary mb-1" href="/">Accueil</a>
+      <a class="btn btn-success mb-1" href="/?page=activites">Activités</a>
       <a class="btn btn-outline-dark mb-1" href="/?page=register">Ajouter acteur</a>
       <a class="btn btn-outline-dark mb-1" href="/?page=tous">Liste acteurs</a>
       <button type="button" class="btn btn-outline-dark mb-1" data-toggle="modal" data-target="#exampleModal">Affecter acteurs</button>
@@ -98,9 +112,13 @@
           case "update":
             include 'updater.php';
             break;
-            case "modifier":
-              include 'modifier.php';
-              break;
+          case "modifier":
+            include 'modifier.php';
+            break;
+          case "activites":
+            include 'activites.php';
+            break;
+            
           default:  
           include "scolaire.php";
         }          
@@ -163,16 +181,6 @@
       </div>
     </div>
     <div>
-
-<!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery.js"></script>
-    <!--<script src="popper/popper.js"></script>-->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- Mon JS-->
-    <script src="js/index.js"></script>
-    <!-- Boxicons -->
-    <script src="https://cdn.jsdelivr.net/npm/boxicons@2.0.7/dist/boxicons.min.js"></script>
 </section>
 
 </body>
